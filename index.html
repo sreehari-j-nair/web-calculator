@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web-Calculator</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="script.js"></script>
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
+	body{
+		background-color: #FFE6EA;
+	}
+	.main{
+		height: 530px;
+		width: 400px;
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		transform: translate(-45%,-50%);
+		border-radius: 5px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+	}
+	#screen{
+		pointer-events: none;
+		width: 380px;
+		height:70px;
+		border-radius: 5px;
+		margin-top: 10px;
+		margin-left: 10px;
+		background-color:#FFE6EA;
+		border-color: #FF66FF;
+	}
+	.headarea{
+		text-align: center;
+		font-family: 'Bungee Hairline', cursive;
+	}
+	.buttons{
+		margin-top: 50px;
+		height: 334px;
+	}
+	.btn{
+		box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+		border-radius: 5px;
+		border: #B3BFFF solid 2px;
+		width: 80px;
+		height:50px;
+		margin-left: 10px;
+		margin: 8px;
+	}
+	.btn:hover{
+		background-color:#B3BFFF;
+	}
+	.spclbtn{
+		box-shadow: 0 5px 5px rgb(0 0 0 / 50%);
+    	border-radius: 5px;
+    	border: #FFCC99 solid 2px;
+    	width: 80px;
+    	height: 183px;
+    	margin-left: 10px;
+    	margin: 8px;
+    	position: relative;
+    	left: 300px;
+    	top: -198px;
+	}
+	.spclbtn:hover{
+		background-color:#FFCC99;
+	}
+	.eqlbtn{
+		box-shadow: 0 5px 5px rgb(0 0 0 / 50%);
+    	border-radius: 5px;
+    	border: #19FFB2 solid 2px;
+    	width: 378px;
+    	height: 38px;
+    	position: relative;
+    	top: -8px;
+    	left: 9px;
+	}
+	.eqlbtn:hover{
+		background-color:#19FFB2;
+	}
+</style>
+<body>
+    <div class="main">
+        <div class="output">
+			<input type="text" id="screen">
+		</div>
+		<div class="headarea">
+			<label class="heading"><b>TIMEKEEPER BY SREEHARI</b></label>
+		</div>
+		<div class="buttons">
+			<button class="eqlbtn" onclick="equate()"><b>=</b></button>
+			<div class="row1">
+				<button class="btn" onclick="btnclick(7)"><b>7</b></button>
+				<button class="btn" onclick="btnclick(8)"><b>8</b></button>
+				<button class="btn" onclick="btnclick(9)"><b>9</b></button>
+				<button class="btn" onclick="btnclick('*')"><b>x</b></button>
+			</div>
+			<div class="row1">
+				<button class="btn" onclick="btnclick(4)"><b>4</b></button>
+				<button class="btn" onclick="btnclick(5)"><b>5</b></button>
+				<button class="btn" onclick="btnclick(6)"><b>6</b></button>
+				<button class="btn" onclick="btnclick('-')"><b>-</b></button>
+			</div>
+			<div class="row1">
+				<button class="btn" onclick="btnclick(1)"><b>1</b></button>
+				<button class="btn" onclick="btnclick(2)"><b>2</b></button>
+				<button class="btn" onclick="btnclick(3)" ><b>3</b></button>
+			</div>
+			<div class="row1">
+				<button class="btn" onclick="btnclick('.')"><b>.</b></button>
+				<button class="btn" onclick="btnclick(0)"><b>0</b></button>
+				<button class="btn" onclick="msg()"><b>#</b></button>
+			</div>
+			<div class="row1">
+				<button class="btn" onclick="cleardisplay()"><b>clear</b></button>
+				<button class="btn" onclick="btnclick('/')"><b>/</b></button>
+				<button class="btn" onclick="btnclick('%')"><b>%</b></button>
+			</div>
+			<button class="spclbtn" onclick="btnclick('+')"><b>+</b></button>
+		</div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+</body>
+</html>
